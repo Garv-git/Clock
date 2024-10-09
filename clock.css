@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color:  rgba(163, 188, 22, 0.64);
+}
+.bigcontainer{
+    width: 350px;
+    margin-left: 150px;
+}
+.time{
+    font-size: 5rem;
+    margin-top: 5rem;
+    
+    font-weight: 700;
+    text-align: center;
+    border-bottom: 1px solid brown;
+    border-top: 1px solid brown;
+    }
+    .date{
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+    border-bottom: 1px solid rgb(250, 250, 250);
+    border-top: 1px solid rgb(42, 165, 50);
+    }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212121;
+    background-image: url(https://pixel-creation.com/wp-content/uploads/http-www-bianoti-kali-linux-wallpaper-1366x768-html-fond-d-800x800.jpg);
+    background-size: cover;
+}
+.container{
+    position: relative;
+}
+.clock{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-image: url(https://pixel-creation.com/wp-content/uploads/http-www-bianoti-kali-linux-wallpaper-1366x768-html-fond-d-800x800.jpg);
+    background-size: cover;
+    border: 2px solid rgba(255,255,255,0.25);
+    box-shadow: 0px 0px 30px rgba(10, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: none;
+
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg*var(--i)));
+    inset: 25px;
+
+    text-align: center;
+}
+.clock span b{
+    transform: rotate(calc(-30deg*var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000000;
+    z-index: 2;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 5px;
+    height: var(--h);
+    border-radius: 8px;
+}
